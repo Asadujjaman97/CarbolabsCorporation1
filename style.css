@@ -1,0 +1,603 @@
+  body {
+      font-family: 'Times New Roman', Times, serif;
+      color: #222;
+  }
+
+  /* --- Top Info Bar --- */
+  .top-bar {
+      border-bottom: 1px solid #ddd;
+      padding: 6px 0;
+      font-size: 15px;
+  }
+
+  /* --- Logo + Search Section --- */
+  .header-bar {
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .header-bar .search-box input {
+      border: 1px solid #ccc;
+      padding: 6px 10px;
+      border-radius: 0;
+      width: 220px;
+  }
+
+  .header-bar .search-box button {
+      background: #0046ad;
+      border: none;
+      color: white;
+      padding: 6px 10px;
+  }
+
+  /* --- Main Menu --- */
+  .menu-bar {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .menu-bar .nav-link {
+      color: #222;
+      font-family: "Open Sans", sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      padding: 16px 42px;
+      /* ← wide gap like your screenshot */
+      letter-spacing: 0.4px;
+      text-transform: none;
+      transition: all 0.3s ease;
+  }
+
+  .menu-bar .nav-link:hover {
+      color: #0046ad;
+      text-decoration: none;
+  }
+
+  .navbar-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      /* keeps items visually balanced */
+  }
+
+  #hot-products .card img {
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+  }
+
+  #hot-products .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #hot-products .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .inquiry-btn {
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+  }
+
+  .inquiry-btn:hover {
+      background-color: #0046ad;
+      color: #fff !important;
+      border-color: #0046ad;
+  }
+
+  /* === Hot Products Section === */
+  #hot-products {
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  #hot-products .card {
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #hot-products .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  }
+
+  #hot-products img {
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+
+  #hot-products .enquiry-btn {
+      background-color: #0046ad;
+      color: #fff;
+      border-radius: 25px;
+      padding: 6px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+  }
+
+  #hot-products .enquiry-btn:hover {
+      background-color: #0066ff;
+      transform: scale(1.05);
+  }
+
+  /* Swiper Controls */
+  .hotProductSwiper {
+      padding-bottom: 40px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+      color: #0046ad;
+      width: 26px;
+      height: 26px;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+      font-size: 15px;
+      font-weight: bold;
+  }
+
+  .swiper-pagination-bullet {
+      background: #ccc;
+      opacity: 1;
+      width: 6px;
+      height: 6px;
+  }
+
+  .swiper-pagination-bullet-active {
+      background: #0046ad;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+      #hot-products img {
+          height: 200px;
+      }
+  }
+
+  @media (max-width: 992px) {
+      #hot-products img {
+          height: 190px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      #hot-products img {
+          height: 170px;
+      }
+  }
+
+
+
+  /* --- Carousel --- */
+  .carousel-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+  }
+
+
+
+
+  /* ===Dropdown hover behavior=== */
+  .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+  }
+
+  /* === Dropdown menu box === */
+  .dropdown-menu {
+      background-color: #ffffff;
+      border-radius: 0;
+      padding: 8px 0;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      min-width: 280px;
+  }
+
+  /* === Dropdown item style === */
+  .dropdown-item {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      color: #222;
+      padding: 10px 25px;
+      transition: all 0.2s ease;
+  }
+
+
+  /* ===== About Us Section ===== */
+  .about-us {
+      background-color: #fff;
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  .about-us .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #222;
+  }
+
+  .decorative-line img {
+      max-width: 100px;
+  }
+
+  .about-item {
+      padding: 15px;
+      transition: all 0.3s ease;
+  }
+
+  .about-item:hover {
+      transform: translateY(-5px);
+  }
+
+  .about-item .icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      opacity: 0.7;
+  }
+
+  .about-item h5 {
+      color: #222;
+      font-weight: 700;
+      margin-bottom: 10px;
+  }
+
+  .about-item p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+  }
+
+  /* === Hot Products Section === */
+  #hot-products {
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  #hot-products .card {
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #hot-products .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  }
+
+  #hot-products img {
+      height: 220px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+
+  #hot-products .enquiry-btn {
+      background-color: #0046ad;
+      color: #fff;
+      border-radius: 25px;
+      padding: 6px 20px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+  }
+
+  #hot-products .enquiry-btn:hover {
+      background-color: #0066ff;
+      transform: scale(1.05);
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+      width: 25px !important;
+      height: 25px !important;
+      background-color: white;
+      border: 1.5px solid #007bff;
+      border-radius: 50%;
+      color: #007bff !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+      font-size: 10px !important;
+      font-weight: 600;
+  }
+
+  .swiper-button-next {
+      right: 5px !important;
+  }
+
+  .swiper-button-prev {
+      left: 5px !important;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+      background-color: #007bff;
+      color: white !important;
+      border-color: #007bff;
+  }
+
+
+  .swiper-slide img {
+      width: 100%;
+      height: 200px;
+      /* uniform height */
+      object-fit: contain;
+      /* ensures full image visible */
+      object-position: center;
+      border-radius: 1rem 1rem 0 0;
+      background: #f8f9fa;
+      /* subtle bg for transparency */
+  }
+
+  /* Fix image frame to always show full image proportionally */
+  .hotProductSwiper .card img {
+      width: 100%;
+      height: auto;
+      max-height: 230px;
+      /* you can adjust height if needed */
+      object-fit: contain;
+      /* ensures full image visible */
+      display: block;
+      margin: 0 auto;
+  }
+
+  .hotProductSwiper .card {
+      overflow: hidden;
+  }
+
+  .card-img-top {
+      width: 100%;
+      height: 220px;
+      /* adjust height as you like */
+      object-fit: cover;
+      /* ensures image fills frame cleanly */
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+
+  .hotProductSwiper .swiper-slide img {
+      width: 100%;
+      height: 220px;
+      /* fixed uniform height */
+      object-fit: contain;
+      background-color: #f8f9fa;
+
+      /* light backdrop if image doesn't fill */
+  }
+
+  .hotProductSwiper .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+      #hot-products img {
+          height: 200px;
+      }
+  }
+
+  @media (max-width: 992px) {
+      #hot-products img {
+          height: 190px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      #hot-products img {
+          height: 170px;
+      }
+  }
+
+
+  /* Enquiry Button */
+  .enquiry-btn {
+      background-color: #0046ad;
+      color: white;
+      border: none;
+      border-radius: 0;
+      font-size: 14px;
+      padding: 6px 20px;
+      transition: all 0.3s ease;
+  }
+
+  .enquiry-btn:hover {
+      background-color: #007bff;
+      color: #fff;
+  }
+
+  .footer-section {
+      background-image: url('./Image/green\ forst.jpeg');
+
+      /* ✅ make sure image path is correct */
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      font-family: "Times New Roman", serif;
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+  }
+
+  .footer-overlay {
+      background: rgba(0, 0, 0, 0.4);
+      /* ✅ dark overlay for text visibility */
+      padding: 50px 0 20px;
+  }
+
+  .footer-section h5 {
+      color: #0047ba;
+      font-weight: 700;
+      font-size: 26px;
+      margin-bottom: 15px;
+  }
+
+  .footer-section p,
+  .footer-section li {
+      font-size: 18px;
+      line-height: 1.8;
+  }
+
+  .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+
+  .footer-section .social-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+  }
+
+  .footer-section .social-list i {
+      width: 35px;
+      height: 35px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+  }
+
+  .fb {
+      background: #3b5998;
+  }
+
+  .tw {
+      background: #1da1f2;
+  }
+
+  .pt {
+      background: #bd081c;
+  }
+
+  .li {
+      background: #0077b5;
+  }
+
+  .gp {
+      background: #db4a39;
+  }
+
+
+  .footer-section img.qr {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      width: 190px;
+      height: auto;
+  }
+
+  .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin-top: 25px;
+      padding-top: 10px;
+      font-size: 16px;
+  }
+
+  .footer-bottom a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 6px;
+  }
+
+  .footer-bottom a:hover {
+      color: #00b0ff;
+      text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+      .footer-section {
+          text-align: center;
+          background-attachment: scroll;
+      }
+
+      .footer-section img.qr {
+          margin-top: 20px;
+      }
+  }
+
+  .dropdown-item:hover {
+      background-color: #f5f7fa;
+      color: #0046ad;
+  }
+
+  body {
+      background: #f5f7fa;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .enquiry-card {
+      border-radius: 20px;
+      position: relative;
+      background: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+
+  .enquiry-card::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(135deg, #2563eb, #4f46e5);
+      border-radius: 50%;
+      z-index: 0;
+  }
+
+  .enquiry-card h3 {
+      font-weight: 700;
+      color: #2b3440;
+  }
+
+  .enquiry-card p {
+      color: #456;
+  }
+
+  .enquiry-card .form-control {
+      background: #f1f3f6;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 15px;
+      font-size: 15px;
+  }
+
+  .enquiry-card .form-control:focus {
+      box-shadow: none;
+      background: #e9eef8;
+  }
+
+  .btn-primary {
+      background-color: #1d4ed8;
+      border: none;
+      border-radius: 10px;
+  }
+
+  .btn-primary:hover {
+      background-color: #2563eb;
+  }
+
+  .btn-close {
+      z-index: 10;
+  }
