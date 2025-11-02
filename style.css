@@ -1,636 +1,1097 @@
-  body {
-      font-family: 'Times New Roman', Times, serif;
-      color: #222;
-  }
-
-  /* --- Top Info Bar --- */
-  .top-bar {
-      border-bottom: 1px solid #ddd;
-      padding: 6px 0;
-      font-size: 15px;
-  }
-
-  /* --- Logo + Search Section --- */
-  .header-bar {
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-  }
-
-  .header-bar .search-box input {
-      border: 1px solid #ccc;
-      padding: 6px 10px;
-      border-radius: 0;
-      width: 220px;
-  }
-
-  .header-bar .search-box button {
-      background: #0046ad;
-      border: none;
-      color: white;
-      padding: 6px 10px;
-  }
-
-  /* --- Main Menu --- */
-  .menu-bar {
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-  }
-
-  .menu-bar .nav-link {
-      color: #222;
-      font-family: "Open Sans", sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      padding: 16px 42px;
-      /* ← wide gap like your screenshot */
-      letter-spacing: 0.4px;
-      text-transform: none;
-      transition: all 0.3s ease;
-  }
-
-  .menu-bar .nav-link:hover {
-      color: #0046ad;
-      text-decoration: none;
-  }
-
-  .navbar-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 40px;
-      /* keeps items visually balanced */
-  }
-
-  #hot-products .card img {
-      height: 220px;
-      object-fit: cover;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-  }
-
-  #hot-products .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  #hot-products .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  }
-
-  .inquiry-btn {
-      border-radius: 6px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-  }
-
-  .inquiry-btn:hover {
-      background-color: #0046ad;
-      color: #fff !important;
-      border-color: #0046ad;
-  }
-
-  /* === Hot Products Section === */
-  #hot-products {
-      font-family: 'Open Sans', sans-serif;
-  }
-
-  #hot-products .card {
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  #hot-products .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-  }
-
-  #hot-products img {
-      height: 220px;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-  }
-
-  #hot-products .enquiry-btn {
-      background-color: #0046ad;
-      color: #fff;
-      border-radius: 25px;
-      padding: 6px 20px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-  }
-
-  #hot-products .enquiry-btn:hover {
-      background-color: #0066ff;
-      transform: scale(1.05);
-  }
-
-  /* Swiper Controls */
-  .hotProductSwiper {
-      padding-bottom: 40px;
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-      color: #0046ad;
-      width: 26px;
-      height: 26px;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-      font-size: 15px;
-      font-weight: bold;
-  }
-
-  .swiper-pagination-bullet {
-      background: #ccc;
-      opacity: 1;
-      width: 6px;
-      height: 6px;
-  }
-
-  .swiper-pagination-bullet-active {
-      background: #0046ad;
-  }
-
-  /* --- Fix spacing between Enquiry button and pagination dots --- */
-  #hot-products .swiper {
-      padding-bottom: 70px;
-      /* increases the space for dots below the cards */
-  }
-
-  #hot-products .swiper-pagination {
-      bottom: 15px !important;
-      /* moves dots a bit above bottom */
-  }
-
-  #hot-products .swiper-slide .enquiry-btn {
-      margin-top: 12px;
-      /* space between text & button */
-      margin-bottom: 25px;
-      /* ensures the button stays above pagination dots */
-  }
-
-
-  /* Responsive */
-  @media (max-width: 1200px) {
-      #hot-products img {
-          height: 200px;
-      }
-  }
-
-  @media (max-width: 992px) {
-      #hot-products img {
-          height: 190px;
-      }
-  }
-
-  @media (max-width: 768px) {
-      #hot-products img {
-          height: 170px;
-      }
-  }
-
-
-
-  /* --- Carousel --- */
-  .carousel-item img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-  }
-
-
-
-
-  /* ===Dropdown hover behavior=== */
-  .nav-item.dropdown:hover .dropdown-menu {
-      display: block;
-      margin-top: 0;
-  }
-
-  /* === Dropdown menu box === */
-  .dropdown-menu {
-      background-color: #ffffff;
-      border-radius: 0;
-      padding: 8px 0;
-      border: 1px solid #eee;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      min-width: 280px;
-  }
-
-  /* === Dropdown item style === */
-  .dropdown-item {
-      font-family: "Open Sans", sans-serif;
-      font-size: 16px;
-      color: #222;
-      padding: 10px 25px;
-      transition: all 0.2s ease;
-  }
-
-
-  /* ===== About Us Section ===== */
-  .about-us {
-      background-color: #fff;
-      font-family: 'Open Sans', sans-serif;
-  }
-
-  .about-us .section-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-      color: #222;
-  }
-
-  .decorative-line img {
-      max-width: 100px;
-  }
-
-  .about-item {
-      padding: 15px;
-      transition: all 0.3s ease;
-  }
-
-  .about-item:hover {
-      transform: translateY(-5px);
-  }
-
-  .about-item .icon {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      opacity: 0.7;
-  }
-
-  .about-item h5 {
-      color: #222;
-      font-weight: 700;
-      margin-bottom: 10px;
-  }
-
-  .about-item p {
-      font-size: 15px;
-      line-height: 1.6;
-      color: #555;
-  }
-
-  /* === Hot Products Section (Final Responsive) === */
-  #hot-products {
-      font-family: 'Open Sans', sans-serif;
-      background: #f8f9fa;
-      padding: 60px 0;
-  }
-
-  #hot-products .card {
-      border: none;
-      border-radius: 12px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      background-color: #fff;
-  }
-
-  #hot-products .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
-  }
-
-  #hot-products .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-  }
-
-  /* Enquiry Button */
-  #hot-products .enquiry-btn {
-      background-color: #0046ad;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      padding: 6px 20px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-  }
-
-  #hot-products .enquiry-btn:hover {
-      background-color: #0066ff;
-      transform: scale(1.05);
-  }
-
-  /* Swiper Controls */
-  .hotProductSwiper {
-      padding-bottom: 40px;
-  }
-
-  /* ----- Clean, smaller Swiper arrows ----- */
-  #hot-products .swiper-button-prev,
-  #hot-products .swiper-button-next {
-      width: 34px;
-      /* button circle size — tweak smaller if needed */
-      height: 34px;
-      border-radius: 50%;
-      background: #ffffff;
-      border: 1.5px solid #0b66c3;
-      /* blue border */
-      color: #0b66c3;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 50;
-      /* ensure above cards */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.18s ease;
-  }
-
-  /* slightly smaller icon inside the circle */
-  #hot-products .swiper-button-next::after,
-  #hot-products .swiper-button-prev::after {
-      font-size: 14px;
-      /* arrow glyph size (reduce if you want even smaller) */
-      line-height: 1;
-      color: inherit;
-      font-weight: 700;
-  }
-
-  /* move arrows a bit outside the card frame so they don't overlap rounded corners */
-  #hot-products .swiper-button-prev {
-      left: 8px;
-  }
-
-  #hot-products .swiper-button-next {
-      right: 8px;
-  }
-
-  /* hover style */
-  #hot-products .swiper-button-prev:hover,
-  #hot-products .swiper-button-next:hover {
-      background: #0b66c3;
-      color: #fff;
-      border-color: #0b66c3;
-  }
-
-  /* mobile tweak so arrows don't go off-screen */
-  @media (max-width: 768px) {
-      #hot-products .swiper-button-prev {
-          left: 5px;
-          width: 15px;
-          height: 15px;
-      }
-
-      #hot-products .swiper-button-next {
-          right: 5px;
-          width: 15px;
-          height: 15px;
-      }
-
-      #hot-products .swiper-button-next::after,
-      #hot-products .swiper-button-prev::after {
-          font-size: 12px;
-      }
-  }
-
-
-  /* Hover effect */
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-      background-color: #0046ad;
-      color: #fff;
-  }
-
-  /* Optional: reduce the size of the internal arrow icon */
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-      font-size: 12px;
-      /* default is ~20px; shrink it */
-  }
-
-
-  .swiper-pagination-bullet {
-      background: #ccc;
-      opacity: 1;
-      width: 6px;
-      height: 6px;
-  }
-
-  .swiper-pagination-bullet-active {
-      background: #0046ad;
-  }
-
-  /* Responsive Layout */
-  @media (max-width: 1200px) {
-      #hot-products .card img {
-          height: 200px;
-      }
-  }
-
-  @media (max-width: 992px) {
-      #hot-products .card img {
-          height: 180px;
-      }
-  }
-
-  @media (max-width: 768px) {
-      #hot-products .card img {
-          height: 160px;
-      }
-  }
-
-  @media (max-width: 576px) {
-      #hot-products .card img {
-          height: 150px;
-      }
-
-      #hot-products .card {
-          margin: 0 10px;
-      }
-  }
-
-  .footer-section {
-      background-image: url('./Image/green\ forst.jpeg');
-
-      /* ✅ make sure image path is correct */
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-attachment: fixed;
-      color: #fff;
-      font-family: "Times New Roman", serif;
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-  }
-
-  .footer-overlay {
-      background: rgba(0, 0, 0, 0.4);
-      /* ✅ dark overlay for text visibility */
-      padding: 50px 0 20px;
-  }
-
-  .footer-section h5 {
-      color: #0047ba;
-      font-weight: 700;
-      font-size: 26px;
-      margin-bottom: 15px;
-  }
-
-  .footer-section p,
-  .footer-section li {
-      font-size: 18px;
-      line-height: 1.8;
-  }
-
-  .footer-section ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-  }
-
-  .footer-section .social-list li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-  }
-
-  .footer-section .social-list i {
-      width: 35px;
-      height: 35px;
-      border-radius: 4px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
-  }
-
-  .fb {
-      background: #3b5998;
-  }
-
-  .tw {
-      background: #1da1f2;
-  }
-
-  .pt {
-      background: #bd081c;
-  }
-
-  .li {
-      background: #0077b5;
-  }
-
-  .gp {
-      background: #db4a39;
-  }
-
-
-  .footer-section img.qr {
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      width: 190px;
-      height: auto;
-  }
-
-  .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
-      margin-top: 25px;
-      padding-top: 10px;
-      font-size: 16px;
-  }
-
-  .footer-bottom a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 6px;
-  }
-
-  .footer-bottom a:hover {
-      color: #00b0ff;
-      text-decoration: underline;
-  }
-
-  @media (max-width: 768px) {
-      .footer-section {
-          text-align: center;
-          background-attachment: scroll;
-      }
-
-      .footer-section img.qr {
-          margin-top: 20px;
-      }
-  }
-
-  .dropdown-item:hover {
-      background-color: #f5f7fa;
-      color: #0046ad;
-  }
-
-  body {
-      background: #f5f7fa;
-      font-family: 'Poppins', sans-serif;
-  }
-
-  .enquiry-card {
-      border-radius: 20px;
-      position: relative;
-      background: #fff;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-  }
-
-  .enquiry-card::before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      right: -50px;
-      width: 120px;
-      height: 120px;
-      background: linear-gradient(135deg, #2563eb, #4f46e5);
-      border-radius: 50%;
-      z-index: 0;
-  }
-
-  .enquiry-card h3 {
-      font-weight: 700;
-      color: #2b3440;
-  }
-
-  .enquiry-card p {
-      color: #456;
-  }
-
-  .enquiry-card .form-control {
-      background: #f1f3f6;
-      border: none;
-      border-radius: 10px;
-      padding: 12px 15px;
-      font-size: 15px;
-  }
-
-  .enquiry-card .form-control:focus {
-      box-shadow: none;
-      background: #e9eef8;
-  }
-
-  .btn-primary {
-      background-color: #1d4ed8;
-      border: none;
-      border-radius: 10px;
-  }
-
-  .btn-primary:hover {
-      background-color: #2563eb;
-  }
-
-  .btn-close {
-      z-index: 10;
-  }
+ body {
+     font-family: 'Times New Roman', Times, serif;
+     color: #222;
+ }
+
+ /* ✅ Sticky Header (includes Topbar + Navbar) */
+ header {
+     position: sticky;
+     top: 0;
+     z-index: 1030;
+     background: linear-gradient(135deg, #729aaafd 0%, #638981 100%);
+     color: #ffffff;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+ }
+
+ /* 🌐 Topbar */
+ .topbar {
+     background: transparent;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+     font-family: "Inter", sans-serif;
+     color: #ffffff;
+ }
+
+ .topbar .contact-info a {
+     color: #e8f9ff;
+     text-decoration: none;
+ }
+
+ .topbar .contact-info a:hover {
+     text-decoration: underline;
+ }
+
+ /* 🌐 Search box */
+ .search-box input {
+     border: none;
+     border-radius: 4px 0 0 4px;
+     padding: 6px 10px;
+     outline: none;
+ }
+
+ .search-box button {
+     background-color: #004d80;
+     border: none;
+     color: white;
+     border-radius: 0 4px 4px 0;
+     padding: 6px 12px;
+ }
+
+ .search-box button:hover {
+     background-color: #006fbf;
+ }
+
+ form button:hover i {
+     color: #ffd700;
+     transform: scale(1.2);
+     transition: all 0.3s ease;
+ }
+
+ /* --- Search Button Hover Effect --- */
+ form button {
+     background: none;
+     border: none;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ form button i {
+     color: white;
+     font-size: 18px;
+     transition: all 0.3s ease;
+ }
+
+ /* Hover state: make it feel alive */
+ form button:hover i {
+     color: #00ff88;
+     /* glowing green tint */
+     transform: scale(1.25);
+     /* gentle zoom */
+     filter: drop-shadow(0 0 4px #00ff88);
+ }
+
+ form button:active i {
+     transform: scale(0.95);
+     opacity: 0.8;
+ }
+
+
+
+
+ .navbar-nav .nav-link {
+     color: #ffffff !important;
+     font-weight: 500;
+     padding: 10px 16px;
+     transition: color 0.3s ease;
+ }
+
+ .navbar-nav .nav-link:hover {
+     color: #aee7ff !important;
+ }
+
+ /* 🌐 Dropdown */
+ .navbar .dropdown-menu {
+     background: #0078a8;
+     border: none;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .navbar .dropdown-item {
+     color: #fff;
+ }
+
+ .navbar .dropdown-item:hover {
+     background: rgba(255, 255, 255, 0.15);
+ }
+
+ /* 🌐 Responsive fixes */
+ .navbar-toggler {
+     border: none;
+     filter: brightness(2);
+ }
+
+ /* keep header above hero carousel */
+ body {
+     scroll-padding-top: 140px;
+ }
+
+
+
+ /* Optional: logo and text contrast for visibility */
+ .brand-name {
+     color: #fff;
+     font-weight: 600;
+ }
+
+ .navbar .nav-link {
+     color: #fff !important;
+     font-weight: 500;
+ }
+
+ .navbar .nav-link:hover {
+     color: #a8ffb5 !important;
+ }
+
+
+
+
+
+
+ /* ===== Topbar ===== */
+ .topbar {
+     background: transparent;
+     /* use background image instead */
+     color: #fff;
+     font-family: "Inter", sans-serif;
+     font-size: 14px;
+ }
+
+ .topbar .brand-name {
+     font-weight: 700;
+     color: #ffffff;
+ }
+
+ .topbar .contact-info strong {
+     color: #c0ffc0;
+ }
+
+ /* ===== Search Box ===== */
+ .search-box input {
+     border: none;
+     border-radius: 20px 0 0 20px;
+     padding: 5px 10px;
+     outline: none;
+     width: 160px;
+ }
+
+ .search-box button {
+     border: none;
+     background: #005f2e;
+     color: white;
+     border-radius: 0 20px 20px 0;
+     padding: 6px 12px;
+     transition: 0.3s;
+ }
+
+ .search-box button:hover {
+     background: #00984d;
+ }
+
+ /* ===== Navbar ===== */
+
+
+ .navbar-nav .nav-link {
+     color: #fff !important;
+     font-weight: 500;
+     padding: 10px 18px;
+     transition: 0.3s;
+ }
+
+ .navbar-nav .nav-link:hover {
+     color: #a8f5b0 !important;
+ }
+
+ /* ===== Dropdown ===== */
+ .dropdown-menu {
+     background-color: rgba(255, 255, 255, 0.95);
+     border-radius: 10px;
+     backdrop-filter: blur(4px);
+ }
+
+ .dropdown-item {
+     color: #004d26;
+     transition: 0.3s;
+ }
+
+ .dropdown-item:hover {
+     background-color: #d8ffe1;
+     color: #007a3d;
+ }
+
+ /* ===== Responsive ===== */
+ @media (max-width: 992px) {
+     .topbar .contact-info {
+         font-size: 13px;
+     }
+
+     .search-box input {
+         width: 120px;
+     }
+
+     .navbar-nav .nav-link {
+         text-align: center;
+         padding: 8px;
+     }
+
+     header {
+         background-position: top;
+     }
+ }
+
+ header,
+ .navbar {
+     background: linear-gradient(to right, #bbdff2, #84cedc);
+     color: #fff;
+ }
+
+
+
+
+ .top-logo {
+     height: 50px;
+     width: auto;
+ }
+
+ .brand-name {
+     color: #002f6c;
+     font-weight: 700;
+     letter-spacing: 0.5px;
+ }
+
+ .contact-info {
+     color: #333;
+     font-size: 14px;
+ }
+
+ /* 🔍 Search box styling */
+ .search-box input {
+     border: 1px solid #ccc;
+     padding: 6px 12px;
+     border-radius: 6px 0 0 6px;
+     outline: none;
+     transition: border-color 0.2s ease;
+ }
+
+ .search-box input:focus {
+     border-color: #0046ad;
+ }
+
+ .search-box button {
+     background-color: #0046ad;
+     color: white;
+     border: none;
+     padding: 6px 12px;
+     border-radius: 0 6px 6px 0;
+     cursor: pointer;
+ }
+
+ .search-box button:hover {
+     background-color: #003380;
+ }
+
+ /* 📱 Responsive adjustments */
+ @media (max-width: 768px) {
+     .topbar .container {
+         flex-direction: column;
+         text-align: center;
+         gap: 8px;
+     }
+
+     .search-box {
+         width: 100%;
+         justify-content: center;
+     }
+
+     .search-box input {
+         width: 60%;
+     }
+ }
+
+ form input[type="search"] {
+     pointer-events: auto;
+     z-index: 2;
+ }
+
+ form button:hover i {
+     color: #0077b6;
+     transform: scale(1.1);
+     transition: all 0.3s ease;
+ }
+
+
+
+
+
+ /* --- Main Menu --- */
+ .menu-bar {
+     background-color: #fff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-top: 1px solid #ddd;
+     border-bottom: 1px solid #ddd;
+ }
+
+ .menu-bar .nav-link {
+     color: #222;
+     font-family: "Open Sans", sans-serif;
+     font-size: 17px;
+     font-weight: 500;
+     padding: 16px 42px;
+     /* ← wide gap like your screenshot */
+     letter-spacing: 0.4px;
+     text-transform: none;
+     transition: all 0.3s ease;
+ }
+
+ .menu-bar .nav-link:hover {
+     color: #0046ad;
+     text-decoration: none;
+ }
+
+ /* Navbar Background Fix */
+ .navbar,
+ header {
+     background: linear-gradient(to right, #0077b6, #00b4d8);
+     color: white;
+ }
+
+ .navbar-nav {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 40px;
+     /* keeps items visually balanced */
+ }
+
+ #hot-products .card img {
+     height: 220px;
+     object-fit: cover;
+     border-top-left-radius: 1rem;
+     border-top-right-radius: 1rem;
+ }
+
+ #hot-products .card {
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ #hot-products .card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+ }
+
+ .inquiry-btn {
+     border-radius: 6px;
+     font-weight: 600;
+     transition: all 0.3s ease;
+ }
+
+ .inquiry-btn:hover {
+     background-color: #0046ad;
+     color: #fff !important;
+     border-color: #0046ad;
+ }
+
+ /* === Hot Products Section === */
+ #hot-products {
+     font-family: 'Open Sans', sans-serif;
+ }
+
+ #hot-products .card {
+     border-radius: 10px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+
+ #hot-products .card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+ }
+
+ #hot-products img {
+     height: 220px;
+     object-fit: cover;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+
+ #hot-products .enquiry-btn {
+     background-color: #0046ad;
+     color: #fff;
+     border-radius: 25px;
+     padding: 6px 20px;
+     font-weight: 500;
+     transition: all 0.3s ease;
+ }
+
+ #hot-products .enquiry-btn:hover {
+     background-color: #0066ff;
+     transform: scale(1.05);
+ }
+
+ /* Swiper Controls */
+ .hotProductSwiper {
+     padding-bottom: 40px;
+ }
+
+ .swiper-button-next,
+ .swiper-button-prev {
+     color: #0046ad;
+     width: 26px;
+     height: 26px;
+ }
+
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+     font-size: 15px;
+     font-weight: bold;
+ }
+
+ .swiper-pagination-bullet {
+     background: #ccc;
+     opacity: 1;
+     width: 6px;
+     height: 6px;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: #0046ad;
+ }
+
+ /* --- Fix spacing between Enquiry button and pagination dots --- */
+ #hot-products .swiper {
+     padding-bottom: 70px;
+     /* increases the space for dots below the cards */
+ }
+
+ #hot-products .swiper-pagination {
+     bottom: 15px !important;
+     /* moves dots a bit above bottom */
+ }
+
+ #hot-products .swiper-slide .enquiry-btn {
+     margin-top: 12px;
+     /* space between text & button */
+     margin-bottom: 25px;
+     /* ensures the button stays above pagination dots */
+ }
+
+
+ /* Responsive */
+ @media (max-width: 1200px) {
+     #hot-products img {
+         height: 200px;
+     }
+ }
+
+ @media (max-width: 992px) {
+     #hot-products img {
+         height: 190px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     #hot-products img {
+         height: 170px;
+     }
+ }
+
+
+
+ /* --- Carousel --- */
+ .carousel-item img {
+     width: 100%;
+     height: 500px;
+     object-fit: cover;
+ }
+
+
+
+
+ /* ===Dropdown hover behavior=== */
+ .nav-item.dropdown:hover .dropdown-menu {
+     display: block;
+     margin-top: 0;
+ }
+
+ /* === Dropdown menu box === */
+ .dropdown-menu {
+     background-color: #ffffff;
+     border-radius: 0;
+     padding: 8px 0;
+     border: 1px solid #eee;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     min-width: 280px;
+ }
+
+ /* === Dropdown item style === */
+ .dropdown-item {
+     font-family: "Open Sans", sans-serif;
+     font-size: 16px;
+     color: #222;
+     padding: 10px 25px;
+     transition: all 0.2s ease;
+ }
+
+
+ /* ===== About Us Section ===== */
+ .about-us {
+     background-color: #fff;
+     font-family: 'Open Sans', sans-serif;
+ }
+
+ .about-us .section-title {
+     font-family: 'Playfair Display', serif;
+     font-weight: 700;
+     color: #222;
+ }
+
+ .decorative-line img {
+     max-width: 100px;
+     align-items: center;
+ }
+
+ .about-item {
+     padding: 15px;
+     transition: all 0.3s ease;
+ }
+
+ .about-item:hover {
+     transform: translateY(-5px);
+ }
+
+ .about-item .icon {
+     width: 80px;
+     height: 80px;
+     object-fit: contain;
+     opacity: 0.7;
+ }
+
+ .about-item h5 {
+     color: #222;
+     font-weight: 700;
+     margin-bottom: 10px;
+ }
+
+ .about-item p {
+     font-size: 15px;
+     line-height: 1.6;
+     color: #555;
+ }
+
+ /* === Hot Products Section (Final Responsive) === */
+ #hot-products {
+     font-family: 'Open Sans', sans-serif;
+     background: #f8f9fa;
+     padding: 60px 0;
+ }
+
+ #hot-products .card {
+     border: none;
+     border-radius: 12px;
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     background-color: #fff;
+ }
+
+ #hot-products .card:hover {
+     transform: translateY(-6px);
+     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+ }
+
+ /* === Clean Responsive Hot Product Styles === */
+ #hot-products .card img {
+     width: 100%;
+     /* use full card width */
+     height: auto;
+     /* make it taller and wider overall */
+     object-fit: contain;
+     /* fill width naturally, no distortion */
+     background-color: #f8f9fa;
+     border-top-left-radius: 12px;
+     border-top-right-radius: 12px;
+     display: block;
+ }
+
+ @media (max-width: 992px) {
+     #hot-products .card img {
+         max-height: 240px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     #hot-products .card img {
+         max-height: 210px;
+     }
+ }
+
+ /* === Swiper Arrow Buttons (smaller, neat) === */
+ .swiper-button-next,
+ .swiper-button-prev {
+     width: 18px !important;
+     height: 18px !important;
+     background-color: #fff;
+     border: 1.5px solid #0046ad;
+     border-radius: 50%;
+     color: #0046ad !important;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s ease;
+ }
+
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+     font-size: 10px !important;
+     font-weight: 600;
+ }
+
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover {
+     background-color: #0046ad;
+     color: #fff !important;
+ }
+
+
+
+ /* Enquiry Button */
+ #hot-products .enquiry-btn {
+     background-color: #0046ad;
+     color: #fff;
+     border: none;
+     border-radius: 25px;
+     padding: 6px 20px;
+     font-weight: 500;
+     transition: all 0.3s ease;
+ }
+
+ #hot-products .enquiry-btn:hover {
+     background-color: #0066ff;
+     transform: scale(1.05);
+ }
+
+ /* Swiper Controls */
+ .hotProductSwiper {
+     padding-bottom: 40px;
+ }
+
+ /* move arrows a bit outside the card frame so they don't overlap rounded corners */
+ #hot-products .swiper-button-prev {
+     left: 8px;
+ }
+
+ #hot-products .swiper-button-next {
+     right: 8px;
+ }
+
+ /* hover style */
+ #hot-products .swiper-button-prev:hover,
+ #hot-products .swiper-button-next:hover {
+     background: #0b66c3;
+     color: #fff;
+     border-color: #0b66c3;
+ }
+
+ /* mobile tweak so arrows don't go off-screen */
+ @media (max-width: 768px) {
+     #hot-products .swiper-button-prev {
+         left: 5px;
+         width: 15px;
+         height: 15px;
+     }
+
+     #hot-products .swiper-button-next {
+         right: 5px;
+         width: 15px;
+         height: 15px;
+     }
+
+     #hot-products .swiper-button-next::after,
+     #hot-products .swiper-button-prev::after {
+         font-size: 12px;
+     }
+ }
+
+
+ /* Hover effect */
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover {
+     background-color: #0046ad;
+     color: #fff;
+ }
+
+ /* Optional: reduce the size of the internal arrow icon */
+ .swiper-button-next::after,
+ .swiper-button-prev::after {
+     font-size: 12px;
+     /* default is ~20px; shrink it */
+ }
+
+
+ .swiper-pagination-bullet {
+     background: #ccc;
+     opacity: 1;
+     width: 6px;
+     height: 6px;
+ }
+
+ .swiper-pagination-bullet-active {
+     background: #0046ad;
+ }
+
+ /* Responsive Layout */
+ @media (max-width: 1200px) {
+     #hot-products .card img {
+         height: 200px;
+     }
+ }
+
+ @media (max-width: 992px) {
+     #hot-products .card img {
+         height: 180px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     #hot-products .card img {
+         height: 160px;
+     }
+ }
+
+ @media (max-width: 576px) {
+     #hot-products .card img {
+         height: 150px;
+     }
+
+     #hot-products .card {
+         margin: 0 10px;
+     }
+ }
+
+ .footer-section {
+     background-image: url('./Image/green\ forst.jpeg');
+
+     /* ✅ make sure image path is correct */
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+     color: #fff;
+     font-family: "Times New Roman", serif;
+     position: relative;
+     width: 100%;
+     overflow: hidden;
+ }
+
+ .footer-overlay {
+     background: rgba(0, 0, 0, 0.4);
+     /* ✅ dark overlay for text visibility */
+     padding: 50px 0 20px;
+ }
+
+ .footer-section h5 {
+     color: #0047ba;
+     font-weight: 700;
+     font-size: 26px;
+     margin-bottom: 15px;
+ }
+
+ .footer-section p,
+ .footer-section li {
+     font-size: 18px;
+     line-height: 1.8;
+ }
+
+ .footer-section ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .footer-section .social-list li {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     margin-bottom: 10px;
+ }
+
+ .footer-section .social-list i {
+     width: 35px;
+     height: 35px;
+     border-radius: 4px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 18px;
+ }
+
+ .fb {
+     background: #3b5998;
+ }
+
+ .tw {
+     background: #1da1f2;
+ }
+
+ .pt {
+     background: #bd081c;
+ }
+
+ .li {
+     background: #0077b5;
+ }
+
+ .gp {
+     background: #db4a39;
+ }
+
+
+ .footer-section img.qr {
+     background: #fff;
+     padding: 10px;
+     border-radius: 8px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+     width: 190px;
+     height: auto;
+ }
+
+ .footer-bottom {
+     border-top: 1px solid rgba(255, 255, 255, 0.2);
+     margin-top: 25px;
+     padding-top: 10px;
+     font-size: 16px;
+ }
+
+ .footer-bottom a {
+     color: #fff;
+     text-decoration: none;
+     margin: 0 6px;
+ }
+
+ .footer-bottom a:hover {
+     color: #00b0ff;
+     text-decoration: underline;
+ }
+
+ .footer-link {
+     color: #e3f2fd;
+     text-decoration: none;
+     transition: 0.3s;
+ }
+
+ .footer-link:hover {
+     color: #90caf9;
+     text-decoration: underline;
+ }
+
+ .footer-social-link {
+     color: #e3f2fd;
+     text-decoration: none;
+     transition: all 0.3s ease;
+ }
+
+ .footer-social-link:hover {
+     color: #90caf9;
+     text-decoration: underline;
+ }
+
+ .social-list i {
+     margin-right: 8px;
+ }
+
+ .footer-categories {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .footer-categories li {
+     margin-bottom: 6px;
+ }
+
+ .footer-categories a {
+     text-decoration: none;
+     color: #ddd;
+     transition: color 0.3s ease, padding-left 0.3s ease;
+ }
+
+ .footer-categories a:hover {
+     color: #00b4d8;
+     /* same sky-blue tone as header */
+     padding-left: 5px;
+ }
+
+ /* QR Code Section */
+ .footer-qr {
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .footer-qr h5 {
+     color: #0056b3;
+     font-weight: 700;
+     margin-bottom: 12px;
+     transition: color 0.3s ease;
+ }
+
+ /* QR Code Image */
+ .footer-qr img {
+     width: 140px;
+     height: auto;
+     border-radius: 12px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+     transition: transform 0.4s ease, box-shadow 0.4s ease;
+ }
+
+ /* Hover Effect */
+ .footer-qr:hover img {
+     transform: scale(1.08);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+ }
+
+ .footer-qr:hover h5 {
+     color: #00b4d8;
+ }
+
+
+
+ @media (max-width: 768px) {
+     .footer-section {
+         text-align: center;
+         background-attachment: scroll;
+     }
+
+     .footer-section img.qr {
+         margin-top: 20px;
+     }
+ }
+
+ .dropdown-item:hover {
+     background-color: #f5f7fa;
+     color: #0046ad;
+ }
+
+ body {
+     background: #f5f7fa;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .enquiry-card {
+     border-radius: 20px;
+     position: relative;
+     background: #fff;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+     overflow: hidden;
+ }
+
+ .enquiry-card::before {
+     content: "";
+     position: absolute;
+     top: -50px;
+     right: -50px;
+     width: 120px;
+     height: 120px;
+     background: linear-gradient(135deg, #2563eb, #4f46e5);
+     border-radius: 50%;
+     z-index: 0;
+ }
+
+ .enquiry-card h3 {
+     font-weight: 700;
+     color: #2b3440;
+ }
+
+ .enquiry-card p {
+     color: #456;
+ }
+
+ .enquiry-card .form-control {
+     background: #f1f3f6;
+     border: none;
+     border-radius: 10px;
+     padding: 12px 15px;
+     font-size: 15px;
+ }
+
+ .enquiry-card .form-control:focus {
+     box-shadow: none;
+     background: #e9eef8;
+ }
+
+ .btn-primary {
+     background-color: #1d4ed8;
+     border: none;
+     border-radius: 10px;
+ }
+
+ .btn-primary:hover {
+     background-color: #2563eb;
+ }
+
+ .btn-close {
+     z-index: 10;
+ }
+
+ /* ---- Social Media Icons ---- */
+ .social-list {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ .social-list li {
+     margin-bottom: 6px;
+ }
+
+ .social-list a {
+     display: inline-flex;
+     align-items: center;
+     gap: 8px;
+     color: #e0e0e0;
+     text-decoration: none;
+     font-size: 15px;
+     transition: all 0.3s ease;
+ }
+
+ .social-list i {
+     font-size: 18px;
+     transition: all 0.3s ease;
+ }
+
+ /* --- Hover Effects --- */
+ .social-list a:hover {
+     color: #fff;
+     transform: translateX(5px);
+ }
+
+ .social-list a:hover i {
+     transform: scale(1.2);
+     text-shadow: 0 0 8px currentColor;
+ }
+
+ /* Individual icon colors */
+ .social-list a:hover i.fb {
+     color: #1877f2;
+ }
+
+ /* Facebook */
+ .social-list a:hover i.tw {
+     color: #1da1f2;
+ }
+
+ /* Twitter */
+ .social-list a:hover i.pt {
+     color: #e60023;
+ }
+
+ /* Pinterest */
+ .social-list a:hover i.li {
+     color: #0077b5;
+ }
+
+ /* LinkedIn */
+ .social-list a:hover i.gp {
+     color: #db4437;
+ }
+
+ /* Google+ */

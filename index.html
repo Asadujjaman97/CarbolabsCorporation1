@@ -12,10 +12,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
 
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -26,38 +30,47 @@
 
 
 </head>
+<header>
 
-<body>
 
-    <!-- Top Info Bar -->
-    <div class="top-bar text-end pe-4">
-        <span class="me-3">Hot Line:+88 01711 777 803</span>
-        <span>Email: sales@carbolabs.com.bd</span>
-    </div>
+    <!-- 🌐 Top Header Bar -->
+    <div class="topbar py-2 px-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+                <img src="./Image/carbos.svg" alt="Carbolabs Logo" class="top-logo">
+                <h4 class="mb-0 brand-name">CARBOLABS CORPORATION</h4>
+            </div>
 
-    <!-- Logo + Search Section -->
-    <!-- Logo + Company Name + ISO + Search -->
-    <div class="header-bar container d-flex justify-content-between align-items-center">
-        <!-- Left: Logo + Company Name -->
-        <div class="d-flex align-items-center">
-            <img src="./Image/Carbolabs logo for web.svg" alt="Logo"
-                style="width: 120px; height: auto; margin-right: 10px;">
-            <div>
-                <h2 class="m-0 fw-bold text-uppercase"
-                    style="font-family: 'Times New Roman', serif; font-size: 22px; color: #002b5c;">
-                    CARBOLABS CORPORATION
-                </h2>
+            <div class="d-flex align-items-center gap-4">
+                <div class="contact-info small">
+                    <span><strong>Hotline:</strong> <a href="tel:+8801711777803">+88 01711 777 803</a></span> |
+                    <span><strong>Email:</strong>
+                        <a href="mailto:sales@carbolabs.com.bd">sales@carbolabs.com.bd</a>,
+                        <a href="mailto:carbolabs@gmail.com">carbolabs@gmail.com</a>
+                    </span>
+
+                </div>
+
+                <form class="d-flex align-items-center ms-3" role="search" onsubmit="return false;">
+                    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+                        style="width: 160px;">
+                    <button class="btn" type="submit" style="background: none; border: none;">
+                        <i class="bi bi-search" style="color: white; font-size: 18px;"></i>
+                    </button>
+                </form>
+
+
+
             </div>
         </div>
+    </div>
 
-        <!-- Right: ISO + Search -->
-        <div class="d-flex align-items-center">
 
-            <form class="d-flex search-box" role="search">
-                <input type="text" placeholder="Keywords">
-                <button type="submit">🔍</button>
-            </form>
-        </div>
+    <!-- Right: ISO + Search -->
+    <div class="d-flex align-items-center">
+
+
+    </div>
     </div>
 
 
@@ -96,76 +109,95 @@
         </div>
     </nav>
 
+</header>
+
+<body>
+
     <!-- Carousel -->
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="./Image/3 boiler red color.jpg" alt="Slide 1">
+                <img src="./Image/Boiler clean photo 1.jpg" alt="Slide 1">
             </div>
             <div class="carousel-item">
-                <img src="./Image/CT  photo.jpg" alt="Slide 2">
+                <img src="./Image/turbine 1.png" alt="Slide 2">
             </div>
             <div class="carousel-item">
                 <img src="./Image/Big Cooling tower .jpg" alt="Slide 3">
             </div>
             <div class="carousel-item">
-                <img src="./Image/RO .jpg" alt="Slide 4">
+                <img src="./Image/Industrial-Reverse-Osmosis-Water-Treatment-Facility.jpg" alt="Slide 4">
             </div>
             <div class="carousel-item">
-                <img src="./Image/power plant big boiler.jpg" alt="Slide 5">
+                <img src="./Image/coal base power plant.jpg" alt="Slide 5">
             </div>
             <div class="carousel-item">
-                <img src="./Image/ETP chemical .jpeg" alt="Slide 6">
+                <img src="./Image/ware house.jpg" alt="Slide 6">
             </div>
         </div>
         <!-- ===== About Us Section ===== -->
-        <section class="about-us py-5 text-center">
-            <div class="container">
-                <h2 class="section-title mb-3">About Us</h2>
+        <section class="py-16 bg-white text-center" id="about">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold mb-12 text-gray-800 tracking-wide uppercase">
+                    About Us
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
+                    <!-- Professional -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./Image/profesional test meter.png" alt="Professional"
+                            class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Professional</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We operate with international-standard expertise supported by advanced R&D
+                            and product testing. Our technical team ensures consistent performance and
+                            reliability in every formulation.
+                        </p>
+                    </div>
 
-                <div class="row gy-4">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="about-item">
-                            <img src="./Image/tie image.png" alt="Professional" class="icon mb-3">
-                            <h5 class="fw-bold">Professional</h5>
-                            <p class="text-muted">We have our own international-level technology development center and
-                                products inspection center.</p>
-                        </div>
+                    <!-- Quality -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./Image/Qualiti chemist.webp" alt="Quality"
+                            class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Quality</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            We provide superior products through strict quality control,
+                            precision formulation, and continuous improvement to exceed
+                            industry standards.
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="about-item">
-                            <img src="./Image/icons/quality.png" alt="Quality" class="icon mb-3">
-                            <h5 class="fw-bold">Quality</h5>
-                            <p class="text-muted">We insist on products selling and services in one, best quality
-                                products with perfect service.</p>
-                        </div>
+
+                    <!-- Innovation -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./Image/profesional.jpg" alt="Innovation"
+                            class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Innovation</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Innovation drives our development. We integrate advanced technologies
+                            to deliver efficient, sustainable water treatment and industrial chemical products.
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="about-item">
-                            <img src="./Image/icons/innovation.png" alt="Innovation" class="icon mb-3">
-                            <h5 class="fw-bold">Innovation</h5>
-                            <p class="text-muted">We insist on technical, marketing, and service innovations. We have 8
-                                invention patents in RO and boiler treatment fields.</p>
-                        </div>
+
+                    <!-- Reliability -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="./Image/reliability.jpg" alt="Reliability"
+                            class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Reliability</h4>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Our clients rely on consistent supply, reliable quality, and
+                            technical support to maintain smooth plant operations.
+                        </p>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="about-item">
-                            <img src="./Image/icons/certificate.png" alt="Certificate" class="icon mb-3">
-                            <h5 class="fw-bold">Certificate</h5>
-                            <p class="text-muted">We hold ISO9001 and NSF certifications and China drinking water health
-                                permit (wading approval).</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>
 
+
         <!-- 🔥 Hot Products Section -->
         <section id="hot-products" class="py-5 bg-light">
             <div class="container">
-                <h2 class="text-center fw-bold mb-4">Hot Products</h2>
-
+                <h1 class="text-center fw-bold mb-4"> REGULAR PRODUCTS </h1>
                 <!-- Swiper -->
                 <div class="swiper hotProductSwiper">
                     <div class="swiper-wrapper">
@@ -213,7 +245,7 @@
 
                         <div class="swiper-slide">
                             <div class="card border-0 shadow-sm text-center">
-                                <img src="./Image/Boiler nice photo.png" class="card-img-top" alt="Product 5">
+                                <img src="./Image/4221.jpg" class="card-img-top" alt="Product 5">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Closed Loop Inhibitor</h5>
                                     <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
@@ -292,21 +324,36 @@
                 <!-- Contact -->
                 <div class="col-md-3">
                     <h5>Contact Us</h5>
-                    <p>+8618389196016</p>
-                    <p>+86-631-5966186</p>
-                    <p>magchemical@163.com</p>
-                    <p>No.199 Baoshan Road, Weihai,<br>Shandong, China</p>
+                    <p>
+                        <a href="tel:+8801711777803" class="footer-link">+88 01711 777 803</a><br>
+                        <a href="mailto:carbolabs@gmail.com" class="footer-link">carbolabs@gmail.com</a><br>
+                        <a href="mailto:sales@carbolabs.com.bd" class="footer-link">sales@carbolabs.com.bd</a>
+                    </p>
+                    <p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=107/1+Old+Airport+Road,+Bijoy+Sarani,+Tejgaon,+Dhaka-1215,+Bangladesh"
+                            target="_blank" class="footer-link">
+                            107/1, Old Airport Road,<br>
+                            Bijoy Sarani, Tejgaon,<br>
+                            Dhaka-1215, Bangladesh.
+                        </a>
+                    </p>
                 </div>
+
+
+
 
                 <!-- Categories -->
                 <div class="col-md-3">
                     <h5>Categories</h5>
-                    <ul>
-                        <li>Basic Raw Materials</li>
-                        <li>RO Water Treatment Chemicals</li>
-                        <li>Boiler Water Treatment Chemicals</li>
-                        <li>Cooling Tower Treatment Chemicals</li>
-                        <li>Waste Water Chemicals</li>
+                    <ul class="footer-categories">
+                        <li><a href="#">Basic Raw Materials</a></li>
+                        <li><a href="#">RO Water Treatment Chemicals</a></li>
+                        <li><a href="#">Boiler Water Treatment Chemicals</a></li>
+                        <li><a href="#">Cooling Tower Treatment Chemicals</a></li>
+                        <li><a href="#">Waste Water Chemicals</a></li>
+                        <li><a href="#">Desalination Chemicals</a></li>
+                        <li><a href="#">Petro Field Refinery Chemicals</a></li>
+                        <li><a href="#">Other Specialty Chemicals</a></li>
                     </ul>
                 </div>
 
@@ -314,41 +361,45 @@
                 <div class="col-md-3">
                     <h5>Follow Us</h5>
                     <ul class="social-list">
-                        <li><i class="fab fa-facebook-f fb"></i> FaceBook</li>
-                        <li><i class="fab fa-twitter tw"></i> Twitter</li>
-                        <li><i class="fab fa-pinterest-p pt"></i> Pinterest</li>
-                        <li><i class="fab fa-linkedin-in li"></i> Linkedin</li>
-                        <li><i class="fab fa-google-plus-g gp"></i> Google Plus</li>
+                        <li><a href="#" target="_blank" class="footer-social-link"><i class="fab fa-facebook-f fb"></i>
+                                Facebook</a></li>
+                        <li><a href="#" target="_blank" class="footer-social-link"><i class="fab fa-twitter tw"></i>
+                                Twitter</a></li>
+                        <li><a href="#" target="_blank" class="footer-social-link"><i class="fab fa-pinterest-p pt"></i>
+                                Pinterest</a></li>
+                        <li><a href="#" target="_blank" class="footer-social-link"><i class="fab fa-linkedin-in li"></i>
+                                LinkedIn</a></li>
+                        <li><a href="#" target="_blank" class="footer-social-link"><i
+                                    class="fab fa-google-plus-g gp"></i> Google Plus</a></li>
                     </ul>
                 </div>
 
-                <!-- QR Code -->
-                <div class="col-md-3 text-center">
-                    <h5>QR CODE</h5>
-                    <img src="./Image/qrcode.png" alt="QR Code" class="qr">
-                </div>
-            </div>
 
-            <!-- Bottom Links -->
-            <div class="footer-bottom text-center">
-                <div class="footer-links">
-                    <a href="#">Home</a> |
-                    <a href="#">About Us</a> |
-                    <a href="#">Products</a> |
-                    <a href="#">News</a> |
-                    <a href="#">Knowledge</a> |
-                    <a href="#">Contact Us</a> |
-                    <a href="#">Cooperation Partner</a> |
-                    <a href="#">Showroom</a> |
-                    <a href="#">Blog</a> |
-                    <a href="#">Service</a> |
-                    <a href="#">Mobile</a> |
-                    <a href="#">XML</a>
+                <!-- QR Code -->
+                <div class="col-md-3 footer-qr">
+                    <h5>QR CODE</h5>
+                    <img src="./Image/qr-code.png" alt="Carbolabs QR Code">
                 </div>
-                <p>Copyright © Weihai Xiangyu Technology Co., Ltd. All Rights Reserved.</p>
+
+
+                <!-- Bottom Links -->
+                <div class="footer-bottom text-center">
+                    <div class="footer-links">
+                        <a href="#">Home</a> |
+                        <a href="#">About Us</a> |
+                        <a href="#">Products</a> |
+                        <a href="#">Knowledge</a> |
+                        <a href="#">Contact Us</a> |
+                        <a href="#">Cooperation Partner</a> |
+                        <a href="#">Service</a> |
+                        <a href="#">Mobile</a> |
+
+                    </div>
+                    <p>© <strong>CARBOLABS CORPORATION</strong> — All rights reserved.</p>
+
+                </div>
             </div>
         </div>
-    </div>
 </footer>
 
 
