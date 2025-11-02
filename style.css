@@ -33,6 +33,12 @@
      }
  }
 
+ .navbar-nav .nav-link:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+     border-radius: 8px;
+ }
+
+
  /* 🌐 Topbar */
  .topbar {
      background: transparent;
