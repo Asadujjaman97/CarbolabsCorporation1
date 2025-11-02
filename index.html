@@ -30,86 +30,79 @@
 
 
 </head>
+
 <header>
-
-
     <!-- 🌐 Top Header Bar -->
-    <div class="topbar py-2 px-4">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-            <div class="d-flex align-items-center gap-3">
-                <img src="./Image/carbos.svg" alt="Carbolabs Logo" class="top-logo">
-                <h4 class="mb-0 brand-name">CARBOLABS CORPORATION</h4>
+    <div class="topbar py-2 px-3" style="background: linear-gradient(90deg, #0077c2, #00a9e0); color: white;">
+        <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+                <img src="./Image/carbos.svg" alt="Carbolabs Logo" class="top-logo" style="width:40px;height:auto;">
+                <h4 class="mb-0 fw-bold">CARBOLABS CORPORATION</h4>
             </div>
 
-            <div class="d-flex align-items-center gap-4">
+            <div class="d-flex align-items-center gap-3 flex-wrap text-center text-md-start">
                 <div class="contact-info small">
-                    <span><strong>Hotline:</strong> <a href="tel:+8801711777803">+88 01711 777 803</a></span> |
+                    <span><strong>Hotline:</strong> <a href="tel:+8801711777803"
+                            class="text-light text-decoration-none">+88 01711 777 803</a></span><br class="d-md-none">
                     <span><strong>Email:</strong>
-                        <a href="mailto:sales@carbolabs.com.bd">sales@carbolabs.com.bd</a>,
-                        <a href="mailto:carbolabs@gmail.com">carbolabs@gmail.com</a>
+                        <a href="mailto:sales@carbolabs.com.bd"
+                            class="text-light text-decoration-none">sales@carbolabs.com.bd</a>,
+                        <a href="mailto:carbolabs@gmail.com"
+                            class="text-light text-decoration-none">carbolabs@gmail.com</a>
                     </span>
-
                 </div>
 
-                <form class="d-flex align-items-center ms-3" role="search" onsubmit="return false;">
+                <form class="d-flex align-items-center mt-2 mt-md-0" role="search" onsubmit="return false;">
                     <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                        style="width: 160px;">
-                    <button class="btn" type="submit" style="background: none; border: none;">
-                        <i class="bi bi-search" style="color: white; font-size: 18px;"></i>
+                        style="width:150px;">
+                    <button class="btn" type="submit" style="background:none;border:none;">
+                        <i class="bi bi-search" style="color:white;font-size:18px;"></i>
                     </button>
                 </form>
-
-
-
             </div>
         </div>
     </div>
 
-
-    <!-- Right: ISO + Search -->
-    <div class="d-flex align-items-center">
-
-
-    </div>
-    </div>
-
-
-
-    <!-- Menu Bar -->
-    <nav class="menu-bar navbar navbar-expand-lg navbar-light bg-white">
+    <!-- 🧭 Menu Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #00a9e0;">
         <div class="container">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button">
-                        Products
-                    </a>
-                    <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="productsDropdown">
-                        <li><a class="dropdown-item" href="#">Basic Raw Materials</a></li>
-                        <li><a class="dropdown-item" href="#">RO Water Treatment Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Boiler Water Treatment Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Cooling Tower Treatment Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Waste Water Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Desalination Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Petro Field Refinery Chemicals</a></li>
-                        <li><a class="dropdown-item" href="#">Other Specialty Chemicals</a></li>
-                    </ul>
-                </li>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">About Us</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="#">Knowledge</a></li>
-                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="productsDropdown" role="button"
+                            data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="#">Basic Raw Materials</a></li>
+                            <li><a class="dropdown-item" href="#">RO Water Treatment Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Boiler Water Treatment Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Cooling Tower Treatment Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Waste Water Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Desalination Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Petro Field Refinery Chemicals</a></li>
+                            <li><a class="dropdown-item" href="#">Other Specialty Chemicals</a></li>
+                        </ul>
+                    </li>
 
-                </li>
-
-
-                <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
-            </ul>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Knowledge</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Service</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
 </header>
+
+
 
 <body>
 
