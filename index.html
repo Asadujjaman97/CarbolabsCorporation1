@@ -170,15 +170,13 @@
                 <div class="swiper hotProductSwiper">
                     <div class="swiper-wrapper">
 
-                        <!-- Repeat structure for each product -->
+                        <!-- Product Card Example -->
                         <div class="swiper-slide">
                             <div class="card border-0 shadow-sm text-center">
                                 <img src="./Image/8331.jpg" class="card-img-top" alt="Product 1">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Boiler Treatment Chemical</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
-
-
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +186,7 @@
                                 <img src="./Image/7208.jpg" class="card-img-top" alt="Product 2">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Cooling Tower Chemical</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +196,7 @@
                                 <img src="./Image/4221.jpg" class="card-img-top" alt="Product 3">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">RO Antiscalant</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +206,7 @@
                                 <img src="./Image/123.jpg" class="card-img-top" alt="Product 4">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Descaling Compound</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +216,7 @@
                                 <img src="./Image/Boiler nice photo.png" class="card-img-top" alt="Product 5">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Closed Loop Inhibitor</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -228,38 +226,7 @@
                                 <img src="./Image/2566.jpg" class="card-img-top" alt="Product 6">
                                 <div class="card-body">
                                     <h5 class="card-title fw-semibold">Oxygen Scavenger</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="card border-0 shadow-sm text-center">
-                                <img src="./Image/2567.jpg" class="card-img-top" alt="Product 7">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-semibold">Corrosion Inhibitor</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="card border-0 shadow-sm text-center">
-                                <img src="./Image/ETP chemical .jpeg" class="card-img-top" alt="Product 8">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-semibold">pH Booster</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="card border-0 shadow-sm text-center">
-                                <img src="./Image/Reliable chemical supplier .jpeg" class="card-img-top"
-                                    alt="Product 9">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-semibold">Cleaning Agent</h5>
-                                    <button class="btn enquiry-btn">Enquiry</button>
+                                    <a href="contact.html#enquiryForm" class="btn enquiry-btn">Enquiry</a>
                                 </div>
                             </div>
                         </div>
@@ -277,7 +244,6 @@
 
 
 
-
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -285,37 +251,34 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
         <script>
-            const swiper = new Swiper(".hotProductSwiper", {
-                slidesPerView: 4,
-                spaceBetween: 20,
+            const swiper = new Swiper('.hotProductSwiper', {
+                slidesPerView: 3,
+                spaceBetween: 30,
                 loop: true,
                 autoplay: {
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 },
                 pagination: {
-                    el: ".swiper-pagination",
+                    el: '.swiper-pagination',
                     clickable: true,
                 },
                 navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
                 breakpoints: {
-                    1400: { slidesPerView: 4 },
-                    1024: { slidesPerView: 3 },
+                    320: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
-                    576: { slidesPerView: 1 },
+                    1024: { slidesPerView: 3 },
                 },
             });
-
-            // Pause autoplay when user hovers
-            const swiperEl = document.querySelector('.hotProductSwiper');
-            swiperEl.addEventListener('mouseenter', () => swiper.autoplay.stop());
-            swiperEl.addEventListener('mouseleave', () => swiper.autoplay.start());
         </script>
-
 
 
 

@@ -259,14 +259,19 @@
       color: #555;
   }
 
-  /* === Hot Products Section === */
+  /* === Hot Products Section (Final Responsive) === */
   #hot-products {
       font-family: 'Open Sans', sans-serif;
+      background: #f8f9fa;
+      padding: 60px 0;
   }
 
   #hot-products .card {
-      border-radius: 10px;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
   }
 
   #hot-products .card:hover {
@@ -274,16 +279,19 @@
       box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   }
 
-  #hot-products img {
+  #hot-products .card img {
+      width: 100%;
       height: 220px;
       object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
   }
 
+  /* Enquiry Button */
   #hot-products .enquiry-btn {
       background-color: #0046ad;
       color: #fff;
+      border: none;
       border-radius: 25px;
       padding: 6px 20px;
       font-weight: 500;
@@ -295,128 +303,67 @@
       transform: scale(1.05);
   }
 
+  /* Swiper Controls */
+  .hotProductSwiper {
+      padding-bottom: 40px;
+  }
+
   .swiper-button-next,
   .swiper-button-prev {
-      width: 25px !important;
-      height: 25px !important;
-      background-color: white;
-      border: 1.5px solid #007bff;
+      color: #0046ad;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border: 1.5px solid #0046ad;
       border-radius: 50%;
-      color: #007bff !important;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-      font-size: 10px !important;
-      font-weight: 600;
-  }
-
-  .swiper-button-next {
-      right: 5px !important;
-  }
-
-  .swiper-button-prev {
-      left: 5px !important;
   }
 
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-      background-color: #007bff;
-      color: white !important;
-      border-color: #007bff;
+      background-color: #0046ad;
+      color: #fff;
   }
 
-
-  .swiper-slide img {
-      width: 100%;
-      height: 200px;
-      /* uniform height */
-      object-fit: contain;
-      /* ensures full image visible */
-      object-position: center;
-      border-radius: 1rem 1rem 0 0;
-      background: #f8f9fa;
-      /* subtle bg for transparency */
+  .swiper-pagination-bullet {
+      background: #ccc;
+      opacity: 1;
+      width: 6px;
+      height: 6px;
   }
 
-  /* Fix image frame to always show full image proportionally */
-  .hotProductSwiper .card img {
-      width: 100%;
-      height: auto;
-      max-height: 230px;
-      /* you can adjust height if needed */
-      object-fit: contain;
-      /* ensures full image visible */
-      display: block;
-      margin: 0 auto;
+  .swiper-pagination-bullet-active {
+      background: #0046ad;
   }
 
-  .hotProductSwiper .card {
-      overflow: hidden;
-  }
-
-  .card-img-top {
-      width: 100%;
-      height: 220px;
-      /* adjust height as you like */
-      object-fit: cover;
-      /* ensures image fills frame cleanly */
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-  }
-
-  .hotProductSwiper .swiper-slide img {
-      width: 100%;
-      height: 220px;
-      /* fixed uniform height */
-      object-fit: contain;
-      background-color: #f8f9fa;
-
-      /* light backdrop if image doesn't fill */
-  }
-
-  .hotProductSwiper .swiper-slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-  }
-
-  /* Responsive */
+  /* Responsive Layout */
   @media (max-width: 1200px) {
-      #hot-products img {
+      #hot-products .card img {
           height: 200px;
       }
   }
 
   @media (max-width: 992px) {
-      #hot-products img {
-          height: 190px;
+      #hot-products .card img {
+          height: 180px;
       }
   }
 
   @media (max-width: 768px) {
-      #hot-products img {
-          height: 170px;
+      #hot-products .card img {
+          height: 160px;
       }
   }
 
+  @media (max-width: 576px) {
+      #hot-products .card img {
+          height: 150px;
+      }
 
-  /* Enquiry Button */
-  .enquiry-btn {
-      background-color: #0046ad;
-      color: white;
-      border: none;
-      border-radius: 0;
-      font-size: 14px;
-      padding: 6px 20px;
-      transition: all 0.3s ease;
-  }
-
-  .enquiry-btn:hover {
-      background-color: #007bff;
-      color: #fff;
+      #hot-products .card {
+          margin: 0 10px;
+      }
   }
 
   .footer-section {
