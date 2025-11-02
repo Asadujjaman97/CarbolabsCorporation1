@@ -158,6 +158,25 @@
       background: #0046ad;
   }
 
+  /* --- Fix spacing between Enquiry button and pagination dots --- */
+  #hot-products .swiper {
+      padding-bottom: 70px;
+      /* increases the space for dots below the cards */
+  }
+
+  #hot-products .swiper-pagination {
+      bottom: 15px !important;
+      /* moves dots a bit above bottom */
+  }
+
+  #hot-products .swiper-slide .enquiry-btn {
+      margin-top: 12px;
+      /* space between text & button */
+      margin-bottom: 25px;
+      /* ensures the button stays above pagination dots */
+  }
+
+
   /* Responsive */
   @media (max-width: 1200px) {
       #hot-products img {
@@ -342,11 +361,11 @@
 
   /* move arrows a bit outside the card frame so they don't overlap rounded corners */
   #hot-products .swiper-button-prev {
-      left: 5px;
+      left: 8px;
   }
 
   #hot-products .swiper-button-next {
-      right: 5px;
+      right: 8px;
   }
 
   /* hover style */
@@ -360,15 +379,15 @@
   /* mobile tweak so arrows don't go off-screen */
   @media (max-width: 768px) {
       #hot-products .swiper-button-prev {
-          left: -8px;
-          width: 30px;
-          height: 30px;
+          left: 5px;
+          width: 15px;
+          height: 15px;
       }
 
       #hot-products .swiper-button-next {
-          right: -8px;
-          width: 30px;
-          height: 30px;
+          right: 5px;
+          width: 15px;
+          height: 15px;
       }
 
       #hot-products .swiper-button-next::after,
