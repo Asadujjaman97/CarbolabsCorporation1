@@ -935,22 +935,32 @@
  }
 
  /* QR Code Image */
+ /* === QR Code alignment and hover fix === */
+ .footer-qr {
+     text-align: center;
+     /* centers the QR code and heading */
+ }
+
+ .footer-qr h5 {
+     margin-bottom: 10px;
+     /* small gap between title and QR */
+ }
+
  .footer-qr img {
-     width: 140px;
+     width: 250px;
+     /* adjust QR size */
      height: auto;
-     border-radius: 12px;
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-     transition: transform 0.4s ease, box-shadow 0.4s ease;
+     border-radius: 8px;
+     /* soft edge */
+     transition: all 0.3s ease;
+     /* for hover effect */
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
  }
 
- /* Hover Effect */
- .footer-qr:hover img {
+ .footer-qr img:hover {
      transform: scale(1.08);
-     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
- }
-
- .footer-qr:hover h5 {
-     color: #00b4d8;
+     /* zoom on hover */
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
  }
 
 
