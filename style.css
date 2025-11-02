@@ -308,23 +308,90 @@
       padding-bottom: 40px;
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-      color: #0046ad;
-      width: 30px;
-      height: 30px;
-      background: #fff;
-      border: 1.5px solid #0046ad;
+  /* ----- Clean, smaller Swiper arrows ----- */
+  #hot-products .swiper-button-prev,
+  #hot-products .swiper-button-next {
+      width: 34px;
+      /* button circle size — tweak smaller if needed */
+      height: 34px;
       border-radius: 50%;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
+      background: #ffffff;
+      border: 1.5px solid #0b66c3;
+      /* blue border */
+      color: #0b66c3;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      /* ensure above cards */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.18s ease;
   }
 
+  /* slightly smaller icon inside the circle */
+  #hot-products .swiper-button-next::after,
+  #hot-products .swiper-button-prev::after {
+      font-size: 14px;
+      /* arrow glyph size (reduce if you want even smaller) */
+      line-height: 1;
+      color: inherit;
+      font-weight: 700;
+  }
+
+  /* move arrows a bit outside the card frame so they don't overlap rounded corners */
+  #hot-products .swiper-button-prev {
+      left: 5px;
+  }
+
+  #hot-products .swiper-button-next {
+      right: 5px;
+  }
+
+  /* hover style */
+  #hot-products .swiper-button-prev:hover,
+  #hot-products .swiper-button-next:hover {
+      background: #0b66c3;
+      color: #fff;
+      border-color: #0b66c3;
+  }
+
+  /* mobile tweak so arrows don't go off-screen */
+  @media (max-width: 768px) {
+      #hot-products .swiper-button-prev {
+          left: -8px;
+          width: 30px;
+          height: 30px;
+      }
+
+      #hot-products .swiper-button-next {
+          right: -8px;
+          width: 30px;
+          height: 30px;
+      }
+
+      #hot-products .swiper-button-next::after,
+      #hot-products .swiper-button-prev::after {
+          font-size: 12px;
+      }
+  }
+
+
+  /* Hover effect */
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
       background-color: #0046ad;
       color: #fff;
   }
+
+  /* Optional: reduce the size of the internal arrow icon */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+      font-size: 12px;
+      /* default is ~20px; shrink it */
+  }
+
 
   .swiper-pagination-bullet {
       background: #ccc;
