@@ -113,7 +113,7 @@
      }
 
      .menu-bar .dropdown.open>.dropdown-menu {
-         display: block;
+         display: contents;
      }
 
      /* keep topbar items stacked nicely */
