@@ -37,8 +37,9 @@
 
 </head>
 
+
 <header>
-    <!-- 🌐 Top Header Bar -->
+
     <div class="topbar py-2 px-3" style="background: linear-gradient(90deg, #0077c2, #00a9e0); color: white;">
         <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
             <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
@@ -70,7 +71,7 @@
     </div>
 
 
-    <!-- 🧭 Menu Bar -->
+
     <nav class="menu-bar navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
             <ul class="navbar-nav mx-auto">
@@ -97,6 +98,13 @@
         </div>
     </nav>
 
+    <ul id="mobileMenu" class="hidden bg-white border-t shadow-inner lg:hidden text-center text-sm">
+        <li><a href="index.html" class="block py-3 hover:bg-blue-50">Home</a></li>
+        <li><a href="about.html" class="block py-3 hover:bg-blue-50">About</a></li>
+        <li><a href="service.html" class="block py-3 hover:bg-blue-50">Services</a></li>
+        <li><a href="industry.html" class="block py-3 hover:bg-blue-50">Industries</a></li>
+        <li><a href="contact.html" class="block py-3 hover:bg-blue-50">Contact</a></li>
+    </ul>
 
 </header>
 
@@ -104,7 +112,7 @@
 
 <body>
 
-    <!-- Carousel -->
+
     <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -126,7 +134,7 @@
                 <img src="./Image/ware house.jpg" alt="Slide 6">
             </div>
         </div>
-        <!-- ===== About Us Section ===== -->
+
         <section class="py-16 bg-white text-center" id="about">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold mb-12 text-gray-800 tracking-wide uppercase">
@@ -134,7 +142,7 @@
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
-                    <!-- Professional -->
+
                     <div class="flex flex-col items-center text-center">
                         <img src="./Image/profesional test meter.png" alt="Professional"
                             class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
@@ -146,7 +154,7 @@
                         </p>
                     </div>
 
-                    <!-- Quality -->
+
                     <div class="flex flex-col items-center text-center">
                         <img src="./Image/Qualiti chemist.webp" alt="Quality"
                             class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
@@ -158,7 +166,7 @@
                         </p>
                     </div>
 
-                    <!-- Innovation -->
+
                     <div class="flex flex-col items-center text-center">
                         <img src="./Image/profesional.jpg" alt="Innovation"
                             class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
@@ -169,7 +177,7 @@
                         </p>
                     </div>
 
-                    <!-- Reliability -->
+
                     <div class="flex flex-col items-center text-center">
                         <img src="./Image/reliability.jpg" alt="Reliability"
                             class="w-20 h-20 object-cover rounded-full shadow-md mb-4 mx-auto">
@@ -185,15 +193,15 @@
         </section>
 
 
-        <!-- 🔥 Hot Products Section -->
+
         <section id="hot-products" class="py-5 bg-light">
             <div class="container">
                 <h1 class="text-center fw-bold mb-4"> REGULAR PRODUCTS </h1>
-                <!-- Swiper -->
+
                 <div class="swiper hotProductSwiper">
                     <div class="swiper-wrapper">
 
-                        <!-- Product Card Example -->
+
                         <div class="swiper-slide">
                             <div class="card border-0 shadow-sm text-center">
                                 <img src="./Image/8331.jpg" class="card-img-top" alt="Product 1">
@@ -256,7 +264,7 @@
 
                     </div>
 
-                    <!-- Pagination + Navigation -->
+
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
@@ -267,7 +275,7 @@
 
 
 
-        <!-- Bootstrap JS -->
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
@@ -301,6 +309,36 @@
                     1024: { slidesPerView: 3 },
                 },
             });
+
+            // Mobile main menu toggle
+            (function () {
+                const mobileToggle = document.getElementById('mobileToggle');
+                const mainNav = document.getElementById('mainNav');
+
+                if (mobileToggle && mainNav) {
+                    mobileToggle.addEventListener('click', function () {
+                        mainNav.classList.toggle('show');
+                        // aria for accessibility
+                        const expanded = this.getAttribute('aria-expanded') === 'true';
+                        this.setAttribute('aria-expanded', String(!expanded));
+                    });
+                }
+
+                // Mobile dropdown toggle - for each dropdown parent
+                document.querySelectorAll('.menu-bar .dropdown').forEach(drop => {
+                    // on mobile, clicking the dropdown parent toggles the submenu
+                    drop.querySelector('.nav-link, .dropdown-toggle')?.addEventListener('click', function (e) {
+                        if (window.innerWidth <= 991.98) {
+                            e.preventDefault(); // prevent top-level link from navigating
+                            drop.classList.toggle('open');
+                        }
+                    });
+                });
+            })();
+
+
+
+
         </script>
 
 
