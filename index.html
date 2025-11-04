@@ -37,55 +37,67 @@
 
 </head>
 
-<header class="fixed top-0 left-0 w-full bg-white shadow z-50">
-    <div class="container mx-auto flex justify-between items-center px-4 py-3">
-        <!-- Logo + Name -->
-        <div class="flex items-center space-x-3">
-            <img src="./Image/carbos.svg" alt="Logo" class="w-12 h-12">
-            <h1 class="text-xl font-bold text-white-900">CARBOLABS CORPORATION</h1>
-        </div>
+<header>
+    <!-- 🌐 Top Header Bar -->
+    <div class="topbar py-2 px-3" style="background: linear-gradient(90deg, #0077c2, #00a9e0); color: white;">
+        <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center gap-2 mb-2 mb-md-0">
+                <img src="./Image/carbos.svg" alt="Carbolabs Logo" class="top-logo" style="width:40px;height:auto;">
+                <h4 class="mb-0 fw-bold">CARBOLABS CORPORATION</h4>
+            </div>
 
-        <!-- Navbar -->
-        <nav>
-            <button id="menuToggle" class="lg:hidden text-2xl text-gray-700"><i class="fa-solid fa-bars"></i></button>
-            <ul id="navMenu" class="hidden lg:flex space-x-6 text-sm font-semibold">
-                <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
-                <li><a href="about.html" class="hover:text-blue-700">About</a></li>
-                <li class="relative group">
-                    <a href="#" class="hover:text-blue-700">Products ▾</a>
-                    <ul
-                        class="absolute hidden group-hover:block bg-white border rounded shadow-md mt-2 w-48 text-sm text-gray-700">
-                        <li><a href="boiler-treatment.html" class="block px-4 py-2 hover:bg-blue-50">Boiler
-                                Treatment</a></li>
-                        <li><a href="cooling-tower.html" class="block px-4 py-2 hover:bg-blue-50">Cooling Tower</a>
-                        </li>
-                        <li><a href="ro-antiscalant.html" class="block px-4 py-2 hover:bg-blue-50">RO
-                                Antiscalant</a></li>
-                        <li><a href="descaling.html" class="block px-4 py-2 hover:bg-blue-50">Descaling</a></li>
-                        <li><a href="closed-loop.html" class="block px-4 py-2 hover:bg-blue-50">Closed Loop</a></li>
-                        <li><a href="oxygen-scavenger.html" class="block px-4 py-2 hover:bg-blue-50">Oxygen
-                                Scavenger</a></li>
-                        <li><a href="rawchemical.html" class="block px-4 py-2 hover:bg-blue-50">Raw Chemicals</a>
-                        </li>
-                        <li><a href="specialitychemical.html" class="block px-4 py-2 hover:bg-blue-50">Speciality
-                                Chemicals</a></li>
-                    </ul>
-                </li>
-                <li><a href="service.html" class="hover:text-blue-700">Services</a></li>
-                <li><a href="industry.html" class="hover:text-blue-700">Industries</a></li>
-                <li><a href="contact.html" class="hover:text-blue-700">Contact</a></li>
-            </ul>
-        </nav>
+            <div class="d-flex align-items-center gap-3 flex-wrap text-center text-md-start">
+                <div class="contact-info small">
+                    <span><strong>Hotline:</strong> <a href="tel:+8801711777803"
+                            class="text-light text-decoration-none">+88 01711 777 803</a></span><br class="d-md-none">
+                    <span><strong>Email:</strong>
+                        <a href="mailto:sales@carbolabs.com.bd"
+                            class="text-light text-decoration-none">sales@carbolabs.com.bd</a>,
+                        <a href="mailto:carbolabs@gmail.com"
+                            class="text-light text-decoration-none">carbolabs@gmail.com</a>
+                    </span>
+                </div>
+
+                <form class="d-flex align-items-center mt-2 mt-md-0" role="search" onsubmit="return false;">
+                    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+                        style="width:150px;">
+                    <button class="btn" type="submit" style="background:none;border:none;">
+                        <i class="bi bi-search" style="color:white;font-size:18px;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 
-    <!-- Mobile Menu -->
-    <ul id="mobileMenu" class="hidden bg-white border-t shadow-inner lg:hidden text-center text-sm">
-        <li><a href="index.html" class="block py-3 hover:bg-blue-50">Home</a></li>
-        <li><a href="about.html" class="block py-3 hover:bg-blue-50">About</a></li>
-        <li><a href="service.html" class="block py-3 hover:bg-blue-50">Services</a></li>
-        <li><a href="industry.html" class="block py-3 hover:bg-blue-50">Industries</a></li>
-        <li><a href="contact.html" class="block py-3 hover:bg-blue-50">Contact</a></li>
-    </ul>
+
+    <!-- 🧭 Menu Bar -->
+    <nav class="menu-bar navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="productsDropdown"
+                        role="button"> Products </a>
+                    <ul class="dropdown-menu shadow-sm border-0" aria-labelledby="productsDropdown">
+                        <li><a class="dropdown-item" href="#">Basic Raw Materials</a></li>
+                        <li><a class="dropdown-item" href="#">RO Water Treatment Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Boiler Water Treatment Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Cooling Tower Treatment Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Waste Water Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Desalination Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Petro Field Refinery Chemicals</a></li>
+                        <li><a class="dropdown-item" href="#">Other Specialty Chemicals</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Knowledge</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
 </header>
 
 
